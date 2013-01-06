@@ -1,0 +1,8 @@
+Changes
+Makefile.PL
+MANIFEST
+MMM.xs
+ppport.h
+README
+t/String-MMM.t
+lib/String/MMM.pm

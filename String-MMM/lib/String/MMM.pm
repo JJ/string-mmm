@@ -7,13 +7,14 @@ use warnings;
 use base 'Exporter';
 
 # This allows declaration	use String::MMM ':all';
-our %EXPORT_TAGS = ( 'all' => [ qw(
-				    match_strings  match_strings_a match_arrays
-) ] );
+our %EXPORT_TAGS = 
+    ( 'all' => 
+		     [ qw(match_strings  match_strings_a match_arrays) ] 
+    );
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-use version; our $VERSION = qv("v0.0.1");  #First release
+use version; our $VERSION = qv("v0.0.2");  #First release
 
 require XSLoader;
 XSLoader::load('String::MMM', $VERSION);
@@ -22,7 +23,6 @@ XSLoader::load('String::MMM', $VERSION);
 
 'ABCD';
 __END__
-# Below is stub documentation for your module. You'd better edit it!
 
 =head1 NAME
 
@@ -59,19 +59,30 @@ over the length of $hidden.
 Same as above, with lowercase letters. Besides, $colors is assumed to
 be 26.
 
-=head2 match_arrays ( $ref_to_hidden_array, $ref_to_hidden_target,
+=head2 match_arrays ( $ref_to_hidden_array, $ref_to_target_array,
 $colors ) 
 
 Same as above, with integer numbers. Just in case you need more than
-26 symbols. 
+26 symbols. Why would you? Nobody knows. But I don't want to pull a
+    Bill Gates here.
 
 =head1 SEE ALSO
 
-This module is used in some algorithms in L<Algorithm::MasterMind>. 
+This module is used by some algorithms in L<Algorithm::MasterMind>. 
 
 =head1 DEPENDENCIES
 
-Needs a C compiler to install 
+Needs a C compiler to install.
+
+=head1 DEVELOPMENT AND BUGS
+
+This project is hosted at
+    L<GitHub|http://github.com/JJ/string-mmm>. You can send bug
+    reports to the L<issue
+    tracker|https://github.com/JJ/string-mmm/issues> o or the L<CPAN
+    tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=String-MMM>. Please
+    use the L<CPAN forum|http://cpanforum.com/dist/String-MMM> for
+    discussion, comments and feature requests. 
 
 =head1 AUTHOR
 

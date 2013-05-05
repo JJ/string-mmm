@@ -20,11 +20,11 @@ BEGIN { use_ok('String::MMM', qw(:all)) };
 # Insert your test code below, the Test::More module is use()ed here so read
 # its man page ( perldoc Test::More ) for help writing this test script.
 
-my $tests = [ [ 'AAAB', 'BAAA', 6, 2, 2, "2b2w" ],
-	      ['AAAA','BBBB',3,0,0,"0b0w"],
-	      ['AAAA','AAAA',3,4,0, "4b0w"],
-	      ['ABCDEFGHIJKLM','M'x13, 15,1,0,"1b0w"],
-	      ['ABCDEFG','GFEDCBA', 10, 1, 6,"1b6w"]];
+my $tests = [ [ 'AAAB', 'BAAA', 6, 2, 2, "2b-2w" ],
+	      ['AAAA','BBBB',3,0,0,"0b-0w"],
+	      ['AAAA','AAAA',3,4,0, "4b-0w"],
+	      ['ABCDEFGHIJKLM','M'x13, 15,1,0,"1b-0w"],
+	      ['ABCDEFG','GFEDCBA', 10, 1, 6,"1b-6w"]];
 
 for my $t ( @$tests ) {
   my @this_test = @$t;

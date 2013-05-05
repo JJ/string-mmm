@@ -67,7 +67,7 @@ s_match_strings(hidden,target,colors)
        }
     }
     char str[7];
-    sprintf(str, "%db%dw", blacks, whites );
+    sprintf(str, "%db-%dw", blacks, whites );
     XPUSHs(sv_2mortal(newSVpv(str,0)));
 
 void
@@ -122,7 +122,7 @@ match_arrays(hidden_ref,target_ref, colors)
     for ( i = 0; i <= av_len( hidden ); i++ ) {
     	int hidden_val = SvIV(*av_fetch(hidden,i,0));
 	int target_val = SvIV(*av_fetch(target,i,0));
-	printf( "%d  h %d t %d\n", i, hidden_val, target_val );
+/* 	printf( "%d  h %d t %d\n", i, hidden_val, target_val ); */
     	if ( hidden_val == target_val ) {
       	   blacks++;
     	} else {

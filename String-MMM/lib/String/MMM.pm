@@ -9,12 +9,12 @@ use base 'Exporter';
 # This allows declaration	use String::MMM ':all';
 our %EXPORT_TAGS = 
     ( 'all' => 
-		     [ qw(match_strings  match_strings_a match_arrays) ] 
+		     [ qw(match_strings s_match_strings match_strings_a match_arrays) ] 
     );
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-use version; our $VERSION = qv("v0.0.2");  #First release
+use version; our $VERSION = qv("v0.0.3");  #Three's the charm
 
 require XSLoader;
 XSLoader::load('String::MMM', $VERSION);
@@ -53,6 +53,13 @@ Matches 'A'-based strings (from 'A....A' to
 $colors. Returns an array with the number of blacks and whites as
 first and second element. Length is not checked; comparison is done
 over the length of $hidden. 
+
+=head2 s_match_strings ( $hidden, $target, $colors )
+
+Matches 'A'-based strings (from 'A....A' to
+'chr($colors)...chr($colors)', with an alphabet of size
+$colors. Returns a string with "%db%dw" as format. It happens that
+it's useful that way and slow to do it otherwise
 
 =head2 match_strings_a ( $hidden, $target )
 

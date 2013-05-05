@@ -1,3 +1,8 @@
+2013-05-05  Juan J. Merelo Guervós  <jjmerelo@gmail.com>
+
+	* lib/String/MMM.pm: Added a new function that returns a string
+	with the result in the form %b%w.
+
 2013-01-28  JJ Merelo  <jmerelo@amy>
 
 	* lib/String/MMM.pm: For the time being, just small cosmetic

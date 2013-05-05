@@ -14,7 +14,7 @@ our %EXPORT_TAGS =
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-use version; our $VERSION = qv("v0.0.3");  #Three's the charm
+use version; our $VERSION = qv("v0.0.4");  #Going ahead
 
 require XSLoader;
 XSLoader::load('String::MMM', $VERSION);

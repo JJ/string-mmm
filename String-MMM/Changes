@@ -2,6 +2,8 @@
 
 	* lib/String/MMM.pm: Added a new function that returns a string
 	with the result in the form %b%w.
+	Changed it to be %b-%w and a bit of stuff too. Starting 0.0.4 with
+	this since it's been already pushed
 
 2013-01-28  JJ Merelo  <jmerelo@amy>
 

@@ -13,10 +13,10 @@ match_strings(hidden,target,colors)
         char *target;
         int colors;
     INIT:
-	 int i;
-  	 int blacks = 0;
-  	 int whites = 0;
-  	 int colors_in_string_h[colors], colors_in_string_t[colors];
+	int i;
+	int blacks = 0;
+  	int whites = 0;
+  	int colors_in_string_h[colors], colors_in_string_t[colors];
     PPCODE:
     for ( i = 0; i < colors; i++ ) {
     	colors_in_string_h[i] =  colors_in_string_t[i] = 0;

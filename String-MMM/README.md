@@ -1,3 +1,5 @@
+#Compute matches between strings, fast
+
 String::MMM is Copyright (C) 2013, JJ Merelo
 
 INSTALLATION

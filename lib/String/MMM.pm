@@ -9,7 +9,7 @@ use base 'Exporter';
 # This allows declaration	use String::MMM ':all';
 our %EXPORT_TAGS = 
     ( 'all' => 
-		     [ qw(match_strings s_match_strings match_strings_a match_arrays) ] 
+		     [ qw(match_strings s_match_strings match_strings_a match_arrays match_played) ] 
     );
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
@@ -72,6 +72,11 @@ $colors )
 Same as above, with integer numbers. Just in case you need more than
 26 symbols. Why would you? Nobody knows. But I don't want to pull a
     Bill Gates here.
+
+=head2 match_played ( $ref_to_combination, $ref_to_played_combinations, 
+$ref_to_black_count, $ref_to_white_count, $colors ) 
+
+Checks the number of matches with played combinations so far.
 
 =head1 SEE ALSO
 

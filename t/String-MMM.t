@@ -4,8 +4,8 @@ use strict;
 use warnings;
 
 use lib qw(../lib lib 
-	   /home/jmerelo/proyectos/CPAN/string-mmm/String-MMM/blib/lib 
-	   /home/jmerelo/proyectos/CPAN/string-mmm/String-MMM/blib/arch);
+	   /home/jmerelo/Code/CPAN/string-mmm/blib/lib 
+	   /home/jmerelo/Code/CPAN/string-mmm/blib/arch);
 
 use Test::More tests => 36;
 BEGIN { use_ok('String::MMM', qw(:all)) };
@@ -37,6 +37,12 @@ for my $t ( @$tests ) {
   @result =  s_match_strings($this_test[0], $this_test[1], $this_test[2]);
   is( $result[0], $this_test[5], 'OK string result ' . $this_test[0] . " " . $this_test[1]);
 }
+
+my $played = [ 'ABCD','BCAA' ];
+my $blacks = [ 0, 2 ];
+my $whites = [3, 1];
+
+is( match_played( 'CCBA', $played, $blacks, $whites, 6 ), 2, "OK matched" );
 
 sub to_arr {
   my $str = shift;

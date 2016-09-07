@@ -1,4 +1,4 @@
 #Things to do
 
-* [ ] Add continuous integration
+* [x] Add continuous integration
 * [ ] Add comparison of arrays

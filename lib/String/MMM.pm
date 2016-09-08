@@ -9,7 +9,8 @@ use base 'Exporter';
 # This allows declaration	use String::MMM ':all';
 our %EXPORT_TAGS = 
     ( 'all' => 
-		     [ qw(match_strings s_match_strings match_strings_a match_arrays match_played) ] 
+		     [ qw(match_strings s_match_strings match_strings_a match_arrays 
+			  match_played distance_played) ] 
     );
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );

@@ -7,7 +7,7 @@ use lib qw(../lib lib
 	   /home/jmerelo/Code/CPAN/string-mmm/blib/lib 
 	   /home/jmerelo/Code/CPAN/string-mmm/blib/arch);
 
-use Test::More tests => 37;
+use Test::More tests => 39;
 BEGIN { use_ok('String::MMM', qw(:all)) };
 
 #########################
@@ -43,6 +43,8 @@ my $blacks = [ 0, 2 ];
 my $whites = [3, 1];
 
 is( match_played( 'CCBA', $played, $blacks, $whites, 6 ), 2, "OK matched" );
+is( distance_played( 'CCBA', $played, $blacks, $whites, 6 ), 0, "OK distance" );
+is( distance_played( 'CCBD', $played, $blacks, $whites, 6 ), 3, "OK distance" );
 
 sub to_arr {
   my $str = shift;

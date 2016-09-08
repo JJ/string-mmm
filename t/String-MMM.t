@@ -7,7 +7,7 @@ use lib qw(../lib lib
 	   /home/jmerelo/Code/CPAN/string-mmm/blib/lib 
 	   /home/jmerelo/Code/CPAN/string-mmm/blib/arch);
 
-use Test::More tests => 36;
+use Test::More tests => 37;
 BEGIN { use_ok('String::MMM', qw(:all)) };
 
 #########################

@@ -3,9 +3,7 @@ String::MMM
 
 Perl module for matching strings MasterMind style (Match MasterMind), now available at http://search.cpan.org/~jmerelo/String-MMM/
 
-String::MMM is Copyright (C) 2013, JJ Merelo
-
-INSTALLATION
+## INSTALLATION
 
 To install this module type the following:
 
@@ -14,11 +12,9 @@ To install this module type the following:
    make test
    make install
 
-COPYRIGHT AND LICENCE
+##COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
-
-Copyright (C) 2013 by Juan J. Merelo Guervós
+Copyright (C) 2013,2016 by Juan J. Merelo Guervós
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.16.0 or,
